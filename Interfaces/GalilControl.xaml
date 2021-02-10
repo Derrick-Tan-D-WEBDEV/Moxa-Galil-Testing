@@ -16,7 +16,7 @@
                                 <Style TargetType="{x:Type Border}">
                                     <Style.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#1b1f261"/>
+                                            <Setter Property="Background" Value="#1b1f26"/>
                                         </Trigger>
                                     </Style.Triggers>
                                 </Style>
@@ -85,7 +85,7 @@
             </TextBlock>
 
             <Button Style="{StaticResource TransparentStyle}" Grid.Column="13" HorizontalAlignment="Center" IsDefault="False" VerticalAlignment="Center"  Click="CloseApplicaitons" BorderThickness="0,0,0,0" ClipToBounds="True" Focusable="False" Cursor="Hand">
-                <Image  Source="Image/cancel.png1"/>
+                <Image  Source="Image/cancel.png"/>
             </Button>
 
 
