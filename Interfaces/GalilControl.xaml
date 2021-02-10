@@ -85,7 +85,7 @@
             </TextBlock>
 
             <Button Style="{StaticResource TransparentStyle}" Grid.Column="13" HorizontalAlignment="Center" IsDefault="False" VerticalAlignment="Center"  Click="CloseApplicaitons" BorderThickness="0,0,0,0" ClipToBounds="True" Focusable="False" Cursor="Hand">
-                <Image  Source="Image/cancel.png"/>
+                <Image  Source="Image/cancel.png1"/>
             </Button>
 
 
