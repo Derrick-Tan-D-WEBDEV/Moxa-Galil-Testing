@@ -16,7 +16,7 @@
                                 <Style TargetType="{x:Type Border}">
                                     <Style.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#1b1f26"/>
+                                            <Setter Property="Background" Value="#1b1f261"/>
                                         </Trigger>
                                     </Style.Triggers>
                                 </Style>
