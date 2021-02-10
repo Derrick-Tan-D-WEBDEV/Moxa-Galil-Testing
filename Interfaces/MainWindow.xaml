@@ -1,0 +1,174 @@
+﻿<Window x:Class="Interfaces.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interfaces"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#1b1f26"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid Background="Transparent">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.Resources>
+            <Style TargetType="{x:Type Image}">
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="297*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Background="#222831" MouseDown="DragApplications" Margin="0,0,0,407" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Foreground="#eeeeee" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Fonts/#Roboto-Regular">
+                Greatech PLC Input and Output
+            </TextBlock>
+            <Button FontSize="20" Foreground="Wheat" Style="{StaticResource TransparentStyle}" Grid.Column="12" HorizontalAlignment="Center" IsDefault="False" VerticalAlignment="Center"  Click="OpenGalil" BorderThickness="0,0,0,0" ClipToBounds="True" Focusable="False" Cursor="Hand">
+                Galil
+            </Button>
+
+            <Button Style="{StaticResource TransparentStyle}" Grid.Column="13" HorizontalAlignment="Center" IsDefault="False" VerticalAlignment="Center"  Click="CloseApplicaitons" BorderThickness="0,0,0,0" ClipToBounds="True" Focusable="False" Cursor="Hand">
+                <Image  Source="Image/cancel.png"/>
+            </Button>
+
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="#393e46">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Name="lblConnection" FontSize="25" Foreground="White" TextAlignment="Center">Offline</TextBlock>
+                <Image VerticalAlignment="Center" Opacity="0.3"  HorizontalAlignment="Center" Source="Image/machine.png" Name="PLC_img" Margin="20"/>
+            </StackPanel>
+
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#393e46" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="6">
+                <TextBlock FontSize="30" Foreground="White" VerticalAlignment="Bottom">Input</TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" Grid.ColumnSpan="15" Name="Input_Grid" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+            <Grid Grid.Row="2" Grid.ColumnSpan="6">
+                <TextBlock FontSize="30" Foreground="White" VerticalAlignment="Bottom">Output</TextBlock>
+            </Grid>
+            <Grid Grid.Row="3" Grid.ColumnSpan="15" Name="Output_Grid" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Grid Grid.Row="4" Grid.ColumnSpan="15" Grid.RowSpan="2">
+
+                <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="#00000000" Background="#ffffff" CornerRadius="10">
+                    <ScrollViewer x:Name="statusInfoScroll">
+                        <TextBlock Name="statusInfo" 
+                             Background="#ffffff" />
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter", "Counter\Counter.csproj", "{6683302A-F979-47A4-8840-361A8474DC9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{DAE7456C-4E19-4D68-9141-CA040E93B0D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoxaIO_Lib", "MoxaIO_Lib\MoxaIO_Lib.csproj", "{18668D29-9FC5-4B20-B2DA-318A362D9A03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6683302A-F979-47A4-8840-361A8474DC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6683302A-F979-47A4-8840-361A8474DC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6683302A-F979-47A4-8840-361A8474DC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6683302A-F979-47A4-8840-361A8474DC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE7456C-4E19-4D68-9141-CA040E93B0D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE7456C-4E19-4D68-9141-CA040E93B0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE7456C-4E19-4D68-9141-CA040E93B0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE7456C-4E19-4D68-9141-CA040E93B0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18668D29-9FC5-4B20-B2DA-318A362D9A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18668D29-9FC5-4B20-B2DA-318A362D9A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18668D29-9FC5-4B20-B2DA-318A362D9A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18668D29-9FC5-4B20-B2DA-318A362D9A03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9BE28FF-428E-41DE-9370-858015220C81}
+	EndGlobalSection
+EndGlobal

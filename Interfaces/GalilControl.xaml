@@ -1,0 +1,159 @@
+﻿<Window x:Class="Interfaces.GalilControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interfaces"
+        mc:Ignorable="d"
+        Title="GalilControl" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#1b1f26"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid Background="Transparent">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TransparentStyleCenter" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#00000000"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="297*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Background="#222831" MouseDown="DragApplications" Margin="0,0,0,407" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Foreground="#eeeeee" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Fonts/#Roboto-Regular">
+                Galil Control
+            </TextBlock>
+
+            <Button Style="{StaticResource TransparentStyle}" Grid.Column="13" HorizontalAlignment="Center" IsDefault="False" VerticalAlignment="Center"  Click="CloseApplicaitons" BorderThickness="0,0,0,0" ClipToBounds="True" Focusable="False" Cursor="Hand">
+                <Image  Source="Image/cancel.png"/>
+            </Button>
+
+
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1" Background="#393e46">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Foreground="white">X - Current Postions:</Label>
+                <Label Foreground="Wheat" Name="xpos_curr">Undefined</Label>
+                <Label Foreground="white">Y - Current Postions:</Label>
+                <Label Foreground="Wheat" Name="ypos_curr"> Undefined</Label>
+                <Label Foreground="white">Z - Current Postions:</Label>
+                <Label Foreground="Wheat" Name="zpos_curr"> Undefined</Label>
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="#393e46" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" Click="HomeXYZ">
+                    <Image Source="Image/axis.png" Width="50"/>
+
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >Homing XYZ</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="1" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" Click="HomeX">
+                    <Image Source="Image/x.png" Width="50"/>
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >Homing X</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" Click="HomeY">
+                    <Image Source="Image/y.png" Width="50"/>
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >Homing Y</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="3" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" Click="HomeZ">
+                    <Image Source="Image/z.png" Width="50"/>
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >Homing Z</Label>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Grid.Row="2" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" MouseDown="JogXF" MouseUp="StopX">
+                    <Image Source="Image/forward.png" Width="50"/>
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >X Forward</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="3" Margin="15" >
+                <Button Style="{StaticResource TransparentStyleCenter}" MouseDown="JogXR" MouseUp="StopX">
+                    <Image Source="Image/reverse.png" Width="50"/>
+                </Button>
+                <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >X Reverse</Label>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
