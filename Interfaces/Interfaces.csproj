@@ -179,5 +179,8 @@
     <Resource Include="Image\forward.png" />
     <Resource Include="Image\reverse.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\machine-connect.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

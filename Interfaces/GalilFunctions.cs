@@ -23,7 +23,7 @@ namespace Interfaces
                 g.command("RS");
                 g.command("XQ#INIT,0");
                 g.command("SH");
-                //g.command("XQ#HOMEXYZ");
+                g.command("XQ#HOMEXYZ");
                 return true;
             }
 
@@ -36,21 +36,29 @@ namespace Interfaces
 
         public double getPosition(int axis_no)
         {
-            double pos = 0;
-            switch (axis_no)
+            try
             {
+                double pos = 0;
+                switch (axis_no)
+                {
 
-                case 0://x-axis
-                    pos = g.commandValue("MG_TPX");
-                    break;
-                case 1://y-axis
-                    pos = g.commandValue("MG_TPY");
-                    break;
-                case 2://z-axis
-                    pos = g.commandValue("MG_TPZ");
-                    break;
+                    case 0://x-axis
+                        pos = g.commandValue("MG_TPX");
+                        break;
+                    case 1://y-axis
+                        pos = g.commandValue("MG_TPY");
+                        break;
+                    case 2://z-axis
+                        pos = g.commandValue("MG_TPZ");
+                        break;
+                }
+                return pos;
             }
-            return pos;
+            catch (Exception ex)
+            {
+                return 0;
+            }
+
         }
         public bool homingXYZ()
         {

@@ -92,6 +92,8 @@
         </Grid>
         <Grid Grid.Column="0" Grid.Row="1" Background="#393e46">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="Image/machine-connect.png" Width="100" Margin="0 0 0 20" Opacity="0.2"/>
+                <Label Foreground="White" Background="Red" HorizontalContentAlignment="Center" Margin="0 0 0 10">Disconnected</Label>
                 <Label Foreground="white">X - Current Postions:</Label>
                 <Label Foreground="Wheat" Name="xpos_curr">Undefined</Label>
                 <Label Foreground="white">Y - Current Postions:</Label>
