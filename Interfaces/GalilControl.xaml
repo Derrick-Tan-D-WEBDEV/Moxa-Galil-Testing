@@ -145,13 +145,13 @@
             </StackPanel>
             
             <StackPanel Grid.Column="1" Grid.Row="2" Margin="15" >
-                <Button Style="{StaticResource TransparentStyleCenter}" MouseDown="JogXF" MouseUp="StopX">
+                <Button Style="{StaticResource TransparentStyleCenter}" PreviewMouseDown="JogXF" PreviewMouseUp="StopX">
                     <Image Source="Image/forward.png" Width="50"/>
                 </Button>
                 <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >X Forward</Label>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="3" Margin="15" >
-                <Button Style="{StaticResource TransparentStyleCenter}" MouseDown="JogXR" MouseUp="StopX">
+                <Button Style="{StaticResource TransparentStyleCenter}" PreviewMouseDown="JogXR" PreviewMouseUp="StopX">
                     <Image Source="Image/reverse.png" Width="50"/>
                 </Button>
                 <Label HorizontalContentAlignment="Center" Foreground="white" FontWeight="DemiBold" >X Reverse</Label>
