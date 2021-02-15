@@ -144,20 +144,6 @@ namespace Interfaces
                 command += "ACC=" + acc + ";";
                 command += "DCC=" + acc + ";";
 
-                //switch (axis_no)
-                //{
-
-                //    case 0://x-axis
-                //        command += "SPX=" + speed + ";";
-                //        break;
-                //    case 1://y-axis
-                //        command += "SPY=" + speed + ";";
-                //        break;
-                //    case 2://z-axis
-                //        command += "SPZ=" + speed + ";";
-                //        break;
-                //}
-
                 switch (axis_no)
                 {
 

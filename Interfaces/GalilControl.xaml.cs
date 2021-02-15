@@ -28,10 +28,18 @@ namespace Interfaces
 
             galilFunctions = new GalilFunctions();
             galilFunctions.GalilInit();
+            if (galilFunctions.connected) {
+                machine_img.Opacity = 1;
+                machine_status.Background = Brushes.Green;
+                machine_status.Content = "Connected";
+            }
+
             tm = new DispatcherTimer();
             tm.Tick += new System.EventHandler(DisplayPositionXYZ);
             tm.Interval = new TimeSpan(0, 0, 0);
             tm.Start();
+
+            
         }
         private void DragApplications(object sender, MouseButtonEventArgs e)
         {
@@ -89,6 +97,16 @@ namespace Interfaces
         private void JogXR(object sender, EventArgs e)
         {
             galilFunctions.jog(0, 1);
+        }
+
+        private void JogYF(object sender, EventArgs e)
+        {
+            galilFunctions.jog(1, 0);
+        }
+
+        private void JogYR(object sender, EventArgs e)
+        {
+            galilFunctions.jog(1, 1);
         }
     }
 }
